@@ -35,6 +35,11 @@
 
                <div class="box d-flex text-area">
                   <!-- input text -->
+
+                  <!-- in ordine:
+                  - v-model: quello che scrivi diventa: userString
+                  - placeholder
+                  - keyup.enter: quando clicchi il tasto invio parte la function addToDo -->
                   <input 
                   class="form-control form-control-lg" 
                   type="text" 
@@ -43,6 +48,9 @@
                   @keyup.enter="addToDo">
                   
                   <!-- button to add -->
+
+                  <!-- in ordine:
+                  - al click: parte la function addToDo -->
                   <button 
                   type="button" 
                   class="btn btn-light"
