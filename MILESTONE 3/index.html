@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans&family=Open+Sans&family=Rubik&display=swap" rel="stylesheet"> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/style.css">
+   <title>vue-todolist</title>
+</head>
+<body>
+   
+   <div id="app">
+
+      <div class="container">
+         <!-- titolo lista -->
+         <div class="row py-4">
+            <div class="col">
+               <div class="box title">
+                  <h1>to-do-list</h1>
+               </div>
+            </div>
+         </div>
+
+         <!-- input to-do text -->
+         <div class="row">
+            <div class="col">
+
+               <div class="box d-flex text-area">
+                  <!-- input text -->
+                  <input class="form-control form-control-lg" type="text" placeholder="Cosa devo fare?">
+                  <!-- button to confirm -->
+                  <button type="button" class="btn btn-light">Conferma</button>
+               </div>
+               
+            </div>
+         </div>
+
+         <!-- list area -->
+         <div 
+         class="row list-area">
+            <div class="col">
+
+               <div 
+               v-for="(toDo, indice) in todos"
+               class="box singleText"
+               v-bind:class="{ fatto: toDo.done }"
+               v-on:click="toDo.done = !toDo.done">
+                  <h4 >
+                     {{toDo.consegna}}
+                  </h4>
+                  <span class="delete"
+                  @click="removeTodo(indice)">
+                     &#10005;
+                  </span>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>
