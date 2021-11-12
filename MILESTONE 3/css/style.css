@@ -9,13 +9,27 @@
    background-color: royalblue;
    height: 100vh;
    width: 100vw;
+   overflow: scroll;
 }
 
 .title h1{
    text-align: center;
    color: white;
-   text-transform: uppercase;
    font-size: 48px;
+}
+
+.title h5,
+.title h1{
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.title h5{
+   background-color: rgb(255, 42, 42);
+   padding: 5px;
+   width: fit-content;
+   margin: auto;
+   color: white;
 }
 
 .text-area,

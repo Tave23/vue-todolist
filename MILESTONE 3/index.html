@@ -21,6 +21,9 @@
             <div class="col">
                <div class="box title">
                   <h1>to-do-list</h1>
+                  <h5>
+                  
+                  inserisci almeno 2 caratteri</h5>
                </div>
             </div>
          </div>
@@ -31,9 +34,18 @@
 
                <div class="box d-flex text-area">
                   <!-- input text -->
-                  <input class="form-control form-control-lg" type="text" placeholder="Cosa devo fare?">
-                  <!-- button to confirm -->
-                  <button type="button" class="btn btn-light">Conferma</button>
+                  <input 
+                  class="form-control form-control-lg" 
+                  type="text" 
+                  v-model="userString" 
+                  placeholder="Cosa devo fare?"
+                  @keyup.enter="addToDo">
+                  
+                  <!-- button to add -->
+                  <button 
+                  type="button" 
+                  class="btn btn-light"
+                  @click="addToDo">Aggiungi</button>
                </div>
                
             </div>
@@ -53,7 +65,7 @@
                      {{toDo.consegna}}
                   </h4>
                   <span class="delete"
-                  @click="removeTodo(indice)">
+                  @click="removeToDo(indice)">
                      &#10005;
                   </span>
                </div>
