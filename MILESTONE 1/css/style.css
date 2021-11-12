@@ -39,10 +39,6 @@
    margin-bottom: 40px;
 }
 
-.list-area{
-   margin-bottom: 10px;
-}
-
 .singleText{
    padding: 10px 15px;
    background-color: whitesmoke;
@@ -51,6 +47,7 @@
    position: relative;
    cursor: pointer;
    color: black;
+   margin-bottom: 10px;
 }
 
 .delete{
@@ -62,5 +59,10 @@
    cursor: pointer;
 }
 
+/* classe consegna fatta */
+.fatto{
+   text-decoration: line-through;
+   color: grey;
+}
 
 

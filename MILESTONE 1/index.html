@@ -41,13 +41,18 @@
 
          <!-- list area -->
          <div 
-         v-for="(item, indice) in todos"
          class="row list-area">
             <div class="col">
-               <div class="box singleText">
-                  <h4>{{item}}</h4>
+
+               <div 
+               v-for="(item, indice) in todos"
+               class="box singleText">
+                  <h4 :class="{fatto: done == true}">
+                     {{todos.item}}
+                  </h4>
                   <span class="delete">&#10005;</span>
                </div>
+               
             </div>
          </div>
       </div>

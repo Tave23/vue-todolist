@@ -6,19 +6,19 @@ const app = new Vue({
    // lista delle cose da fare già impostate
        todos:[
             {
-               item:'Lavare i piatti',      
+               item: "Lavare i piatti",    
             },
             {
-               item:'Gonfiare la bici',
+               item:"Gonfiare la bici",
             },
             {
-               item:'Stendere i panni',
+               item:"Stendere i panni",
             },
             {
-               item:'Comprare regalo',
+               item:"Comprare regalo",
             },
    ],
-   
+   done: 'true',
    
      
    },
