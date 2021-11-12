@@ -49,6 +49,10 @@
    transition: 0.5s;
 }
 
+.text-area input{
+   text-transform: capitalize;
+}
+
 .text-area{
    margin-bottom: 40px;
 }
