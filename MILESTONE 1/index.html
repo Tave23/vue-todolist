@@ -40,10 +40,12 @@
          </div>
 
          <!-- list area -->
-         <div class="row list-area">
+         <div 
+         v-for="(item, indice) in todos"
+         class="row list-area">
             <div class="col">
                <div class="box singleText">
-                  <h4>sto inventando</h4>
+                  <h4>{{item}}</h4>
                   <span class="delete">&#10005;</span>
                </div>
             </div>
