@@ -62,7 +62,7 @@
 /* classe consegna fatta */
 .fatto{
    text-decoration: line-through;
-   color: grey;
+   color: lightgrey;
 }
 
 

@@ -45,12 +45,16 @@
             <div class="col">
 
                <div 
-               v-for="(item, indice) in todos"
+               v-for="(toDo, indice) in todos"
                class="box singleText">
-                  <h4 :class="{fatto: done == true}">
-                     {{todos.item}}
+                  <h4 
+                  v-bind:class="{ fatto: toDo.done }"
+                  v-on:click="toDo.done = !toDo.done">
+                     {{toDo.consegna}}
                   </h4>
-                  <span class="delete">&#10005;</span>
+                  <span class="delete">
+                     &#10005;
+                  </span>
                </div>
                
             </div>

@@ -6,19 +6,26 @@ const app = new Vue({
    // lista delle cose da fare già impostate
        todos:[
             {
-               item: "Lavare i piatti",    
+               consegna: "Lavare i piatti", 
+               done: true,   
             },
             {
-               item:"Gonfiare la bici",
+               consegna:"Gonfiare la bici",
+               done: false,
             },
             {
-               item:"Stendere i panni",
+               consegna:"Stendere i panni",
+               done: false,
             },
             {
-               item:"Comprare regalo",
+               consegna:"Comprare regalo",
+               done: false,
             },
-   ],
-   done: 'true',
+      
+      ],
+
+      done:false,
+   
    
      
    },
@@ -31,7 +38,13 @@ const app = new Vue({
 
    methods:{
 
-      
+      removeTodo(indice){
+
+         console.log(indice);
+         
+         // elimino un object al click
+         this.todos.splice(indice,1);
+      }
 
       
        
